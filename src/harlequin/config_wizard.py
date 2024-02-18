@@ -179,7 +179,12 @@ def _prompt_for_path() -> tuple[Path, bool]:
         style=HARLEQUIN_QUESTIONARY_STYLE,
     ).unsafe_ask()
     path = Path(raw_path)
+<<<<<<< HEAD
     path = path.expanduser()
+=======
+    path = Path.expanduser(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+>>>>>>> 685cbec (fix #465)
     is_pyproject = path.stem == "pyproject"
     if path.suffix != ".toml":
         raise HarlequinWizardError(
