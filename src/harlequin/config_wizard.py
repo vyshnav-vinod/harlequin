@@ -181,6 +181,7 @@ def _prompt_for_path() -> tuple[Path, bool]:
     path = Path(raw_path)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     path = path.expanduser()
 =======
     path = Path.expanduser(path)
@@ -189,6 +190,9 @@ def _prompt_for_path() -> tuple[Path, bool]:
 =======
     path = path.expanduser()
 >>>>>>> 1715a5b (fix #465 - Additional changes)
+=======
+    path = path.expanduser()
+>>>>>>> origin/main
     is_pyproject = path.stem == "pyproject"
     if path.suffix != ".toml":
         raise HarlequinWizardError(
